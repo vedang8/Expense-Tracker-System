@@ -27,5 +27,10 @@ namespace signup_login
         {
             Response.Redirect("~/View.aspx");
         }
+
+        protected void Dailytot_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Daily_Total.aspx");
+        }
     }
 }
