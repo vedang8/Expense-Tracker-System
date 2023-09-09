@@ -28,6 +28,9 @@
         .auto-style8 {
             margin-left: 57px;
         }
+        .auto-style9 {
+            margin-left: 60px;
+        }
     </style>
 </head>
 <body>
@@ -74,7 +77,9 @@
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
+            <asp:Button ID="Button1" runat="server" BackColor="#CC0066" CssClass="auto-style9" ForeColor="White" Text="Add Expense" Width="156px" />
             <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;
             <br />
             <br />
             <br />
