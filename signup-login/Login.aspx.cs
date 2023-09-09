@@ -52,6 +52,7 @@ namespace signup_login
                     }
                 }
             }
+            connection.Close();
         }
     }
 }

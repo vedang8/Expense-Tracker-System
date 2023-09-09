@@ -77,7 +77,7 @@
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
-            <asp:Button ID="Button1" runat="server" BackColor="#CC0066" CssClass="auto-style9" ForeColor="White" Text="Add Expense" Width="156px" />
+            <asp:Button ID="Addbtn" runat="server" BackColor="#CC0066" CssClass="auto-style9" ForeColor="White" Text="Add Expense" Width="156px" OnClick="Addbtn_Click" />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;
             <br />

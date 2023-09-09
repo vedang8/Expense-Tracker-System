@@ -51,6 +51,15 @@ namespace signup_login
         protected global::System.Web.UI.WebControls.Panel Panel3;
 
         /// <summary>
+        /// Viewbtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Viewbtn;
+
+        /// <summary>
         /// Panel1 control.
         /// </summary>
         /// <remarks>
@@ -60,12 +69,12 @@ namespace signup_login
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
-        /// addpanel control.
+        /// Dailytot control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel addpanel;
+        protected global::System.Web.UI.WebControls.LinkButton Dailytot;
     }
 }
