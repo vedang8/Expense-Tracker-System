@@ -15,7 +15,9 @@ namespace signup_login
             string p1 = Session["password"].ToString();
             if (n1 == null)
                 Response.Write("eror");
-            Response.Write("Hello, Welcome: " + n1);
+            //Response.Write("Hello, Welcome: " + n1);
+            Daylbl.Text = DateTime.Today.Day.ToString();
+            Monthlbl.Text = DateTime.Today.Month.ToString();
         }
 
         protected void Addbtn_Click(object sender, EventArgs e)
@@ -31,6 +33,13 @@ namespace signup_login
         protected void Dailytot_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Daily_Total.aspx");
+        }
+
+        protected void Logoutbtn_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("~/Login.aspx");
         }
     }
 }
