@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -24,24 +25,45 @@ namespace signup_login
             string uname = tbuser.Text;
             string password = tbpass.Text;
 
-            string query = "INSERT INTO Users (Username, Password) VALUES (@Username, @Password)";
-
-            using(SqlCommand command = new SqlCommand(query, connection))
+            string query1 = "SELECT COUNT(*) FROM Users WHERE Username = @Username";
+            bool value = true;
+            using (SqlCommand cmd = new SqlCommand(query1, connection))
             {
-                command.Parameters.AddWithValue("@Username", uname);
-                command.Parameters.AddWithValue("@Password", password);
-            
-                int rowsAffected = command.ExecuteNonQuery();
-                if(rowsAffected > 0)
+                cmd.Parameters.AddWithValue("@Username", uname);
+
+                int count = (int)cmd.ExecuteScalar();
+                if(count > 0)
                 {
-                    Response.Write("Congratulations!!! you are registered");
-                    //Response.Redirect("~/Login.apsx");
+                    value = false;
+                    Response.Write("You are ALREADY registered!!!");
                 }
-                else
+
+                
+            }
+
+            if (value)
+            {
+                string query = "INSERT INTO Users (Username, Password) VALUES (@Username, @Password)";
+
+
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    Response.Write("Try again to register");
+                    command.Parameters.AddWithValue("@Username", uname);
+                    command.Parameters.AddWithValue("@Password", password);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        Response.Write("Congratulations!!! you are registered");
+                        //Response.Redirect("~/Login.apsx");
+                    }
+                    else
+                    {
+                        Response.Write("Try again to register");
+                    }
                 }
             }
+            
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)

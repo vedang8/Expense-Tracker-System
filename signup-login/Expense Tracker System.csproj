@@ -72,8 +72,11 @@
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="back_home.jpg" />
     <Content Include="Daily_Total.aspx" />
+    <Content Include="expense.jpg" />
     <Content Include="Login.aspx" />
+    <Content Include="rupees.jpg" />
     <Content Include="signup.aspx" />
     <Content Include="View.aspx" />
     <Content Include="Web.config" />

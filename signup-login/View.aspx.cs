@@ -82,5 +82,10 @@ namespace signup_login
                 Response.Write("Errors: " + ex.Message);
             }
         }
+
+        protected void ImageButton1_Click(object sender, System.Web.UI.ImageClickEventArgs e)
+        {
+            Response.Redirect("~/Welcome.aspx");
+        }
     }
 }

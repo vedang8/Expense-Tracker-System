@@ -48,7 +48,7 @@ namespace signup_login
                     }
                     else
                     {
-                        Response.Write("TRY AGAIN !!! Username is incorrect");
+                        Response.Write("TRY AGAIN !!! User not exist");
                     }
                 }
             }
