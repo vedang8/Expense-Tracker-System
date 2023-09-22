@@ -14,6 +14,7 @@
         }
         .auto-style7 {
             width: 345px;
+            height: 313px;
         }
         .auto-style8 {
             width: 345px;
@@ -24,10 +25,20 @@
         }
         .auto-style10 {
             width: 345px;
-            height: 68px;
+            height: 53px;
         }
         .auto-style11 {
-            height: 68px;
+            height: 53px;
+        }
+        .auto-style12 {
+            height: 313px;
+        }
+        .auto-style13 {
+            width: 345px;
+            height: 97px;
+        }
+        .auto-style14 {
+            height: 97px;
         }
     </style>
 </head>
@@ -54,10 +65,10 @@
                 <td class="auto-style7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:LinkButton ID="Viewbtn" runat="server" Font-Size="XX-Large" ForeColor="White" OnClick="Viewbtn_Click" BackColor="#CC0066">View History</asp:LinkButton>
                 </td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="Daylbl" runat="server" Font-Size="XX-Large" Text="Day"></asp:Label>
+                <td class="auto-style12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="Daylbl" runat="server" Font-Size="XX-Large" Text="Day" Font-Bold="True" Font-Names="Times New Roman"></asp:Label>
                     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Monthlbl" runat="server" Font-Size="Large" Text="Month"></asp:Label>
+            <asp:Label ID="Monthlbl" runat="server" Font-Size="Large" Text="Month" Font-Bold="True" Font-Names="Times New Roman"></asp:Label>
                     <br />
                     <br />
                     <br />
@@ -65,21 +76,28 @@
                     <br />
                     <br />
                     <br />
-                    <asp:Image ID="Image2" runat="server" ImageUrl="~/rupees.jpg" Width="211px" />
+                    <asp:Image ID="Image2" runat="server" ImageUrl="~/rupees.jpg" Width="211px" Height="122px" />
                 </td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <td class="auto-style12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Image ID="Image1" runat="server" CssClass="auto-style4" Height="342px" ImageUrl="~/expense.jpg" Width="426px" />
                 </td>
             </tr>
             <tr>
-                <td class="auto-style8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <td class="auto-style13">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:LinkButton ID="Dailytot" runat="server" Font-Size="XX-Large" ForeColor="White" OnClick="Dailytot_Click" BackColor="#CC0066">Daily Expenditure</asp:LinkButton>
                 </td>
-                <td class="auto-style9">&nbsp;<asp:Label ID="Label1" runat="server" BackColor="White" Font-Size="X-Large" ForeColor="#CC0066" Text="Monthly Expense :"></asp:Label>
+                <td class="auto-style14">&nbsp;<asp:Label ID="Label1" runat="server" BackColor="White" Font-Size="X-Large" ForeColor="#CC0066" Text="Monthly Expense :"></asp:Label>
                     <br />
                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
 &nbsp;</td>
-                <td class="auto-style9"></td>
+                <td class="auto-style14"></td>
+            </tr>
+            <tr>
+                <td class="auto-style8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton ID="Reportsbtn" runat="server" BackColor="#CC0066" Font-Size="XX-Large" ForeColor="White" OnClick="Reportsbtn_Click">Reports</asp:LinkButton>
+                    &nbsp;</td>
+                <td class="auto-style9">&nbsp;</td>
+                <td class="auto-style9">&nbsp;</td>
             </tr>
         </table>
     </form>

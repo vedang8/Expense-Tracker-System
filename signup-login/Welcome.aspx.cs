@@ -38,11 +38,11 @@ namespace signup_login
                     DateTime currentDate = DateTime.Now;
                     int targetMonth = currentDate.Month;
                     // Get the total expense
-                    string q1 = "SELECT SUM(Amount) FROM Expenses WHERE UId = @UId";
+                    string q1 = "SELECT SUM(Amount) FROM Expenses WHERE UId = @UId and Month(Date) = @TargetMonth";
                     SqlCommand cmd1 = new SqlCommand(q1, con);
                     // con.Open();
+                    cmd1.Parameters.Add("@TargetMonth", System.Data.SqlDbType.Int).Value = targetMonth;
                     cmd1.Parameters.AddWithValue("@UId", id);
-
                     decimal amt = Convert.ToDecimal(cmd1.ExecuteScalar());
                     TextBox1.Text = amt.ToString();
                     con.Close();
@@ -74,6 +74,11 @@ namespace signup_login
             Session.Clear();
             Session.Abandon();
             Response.Redirect("~/Login.aspx");
+        }
+
+        protected void Reportsbtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Reports.aspx");
         }
     }
 }
