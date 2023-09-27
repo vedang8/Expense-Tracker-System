@@ -29,6 +29,8 @@
     <form id="form1" runat="server">
         <div>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Panel ID="EmptyMsg" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="#CC0000" Visible="False" Width="384px">
+                There is no data for YOUR CATEGORY!!!</asp:Panel>
             <asp:ImageButton ID="ImageButton1" runat="server" CssClass="auto-style10" Height="47px" ImageUrl="~/back_home.jpg" OnClick="ImageButton1_Click" Width="56px" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
@@ -42,7 +44,7 @@
                     <br />
                     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="Maxtb" runat="server" ForeColor="#CC0066" Height="52px"></asp:TextBox>
+                    <asp:TextBox ID="Maxtb" runat="server" ForeColor="#CC0066" Height="52px" Font-Size="X-Large"></asp:TextBox>
                 </td>
                 <td class="auto-style7">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -54,7 +56,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="Mintb" runat="server" ForeColor="#CC0066" Height="50px" Width="152px"></asp:TextBox>
+                    <asp:TextBox ID="Mintb" runat="server" ForeColor="#CC0066" Height="50px" Width="152px" Font-Size="X-Large"></asp:TextBox>
                     <br />
                 </td>
             </tr>
@@ -67,7 +69,7 @@
 &nbsp;&nbsp;
                     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="Avgtb" runat="server" ForeColor="#CC0066" Height="50px"></asp:TextBox>
+                    <asp:TextBox ID="Avgtb" runat="server" ForeColor="#CC0066" Height="50px" Font-Size="X-Large"></asp:TextBox>
                     <br />
                     <br />
                 </td>
@@ -76,7 +78,7 @@
                     &nbsp;<br />
                     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="Totaltb" runat="server" ForeColor="#CC0066" Height="50px"></asp:TextBox>
+                    <asp:TextBox ID="Totaltb" runat="server" ForeColor="#CC0066" Height="50px" Font-Size="X-Large"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -87,7 +89,7 @@
                     <br />
                     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="Hexptb" runat="server" ForeColor="#CC0066" Height="50px"></asp:TextBox>
+                    <asp:TextBox ID="Hexptb" runat="server" ForeColor="#CC0066" Height="50px" Font-Size="X-Large"></asp:TextBox>
                     <br />
                     <br />
                 </td>
@@ -96,7 +98,7 @@
                     <br />
                     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="Lexptb" runat="server" ForeColor="#CC0066" Height="50px"></asp:TextBox>
+                    <asp:TextBox ID="Lexptb" runat="server" ForeColor="#CC0066" Height="50px" Font-Size="X-Large"></asp:TextBox>
                 </td>
             </tr>
             <tr>
