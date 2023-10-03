@@ -18,11 +18,6 @@ namespace signup_login
             con.ConnectionString = ConfigurationManager.ConnectionStrings["userConnection"].ToString();
         }
 
-        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
-        {
-            Response.Redirect("~/Welcome.aspx");
-        }
-
         protected void Show_Click(object sender, EventArgs e)
         {
             try
@@ -46,7 +41,7 @@ namespace signup_login
                     int id = (int)cmd.ExecuteScalar();
 
                     string cat = DropDownList1.SelectedItem.Text;
-                    
+
                     // Get the total expense
                     string q1 = "SELECT SUM(Amount) FROM Expenses WHERE UId = @UId AND Category = @Category";
                     SqlCommand cmd1 = new SqlCommand(q1, con);
@@ -54,8 +49,9 @@ namespace signup_login
                     cmd1.Parameters.AddWithValue("@Category", cat);
                     object result = cmd1.ExecuteScalar();
                     Console.WriteLine(result);
-                    if (result != DBNull.Value && result != null) {
-                        
+                    if (result != DBNull.Value && result != null)
+                    {
+
                         decimal sum = Convert.ToDecimal(result);
                         if (sum != 0)
                         {
@@ -100,21 +96,22 @@ namespace signup_login
                                 string max_name = read1["Name"].ToString();
                                 Hexptb.Text = max_name;
                             }
-                            
+                            read1.Close();
 
                             // Get the min name expense
                             string q6 = "SELECT Name FROM Expenses WHERE Amount IN (SELECT MIN(Amount) FROM Expenses WHERE UId = @UId AND Category = @Category)";
                             SqlCommand cmd6 = new SqlCommand(q6, con);
                             cmd6.Parameters.AddWithValue("@UId", id);
                             cmd6.Parameters.AddWithValue("@Category", cat);
-                            read1 = cmd6.ExecuteReader();
-                            while (read1.Read())
+
+                            SqlDataReader read2 = cmd6.ExecuteReader();
+                            while (read2.Read())
                             {
-                                string min_name = read1["Name"].ToString();
-                                Hexptb.Text = min_name;
+                                string min_name = read2["Name"].ToString();
+                                Lexptb.Text = min_name;
                             }
-                            read1.Close();
-                            
+                            read2.Close();
+
                         }
                         else
                         {
@@ -128,10 +125,10 @@ namespace signup_login
                         EmptyMsg.Visible = true;
                     }
                     //decimal sum = Convert.ToDecimal(cmd1.ExecuteScalar());
-                    
-                    
 
-                   
+
+
+
                     con.Close();
                 }
             }
@@ -139,6 +136,33 @@ namespace signup_login
             {
                 Response.Write("Errors: " + ex.Message);
             }
+        }
+
+        protected void Addbtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Add.aspx");
+        }
+
+        protected void Viewbtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View.aspx");
+        }
+
+        protected void Dailytot_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Daily_Total.aspx");
+        }
+
+        protected void Reportsbtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Reports.aspx");
+        }
+
+        protected void Logoutbtn_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("~/Login.aspx");
         }
     }
 }

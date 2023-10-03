@@ -75,7 +75,9 @@
     <Content Include="back_home.jpg" />
     <Content Include="Daily_Total.aspx" />
     <Content Include="expense.jpg" />
+    <Content Include="expense_tracker_logo.png" />
     <Content Include="Login.aspx" />
+    <Content Include="loginPage_Image.jpg" />
     <Content Include="Reports.aspx" />
     <Content Include="rupees.jpg" />
     <Content Include="signup.aspx" />

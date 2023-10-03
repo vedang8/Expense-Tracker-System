@@ -8,26 +8,75 @@
     <style type="text/css">
 
         .auto-style1 {
-            margin-left: 45px;
-            margin-bottom: 0px;
+            margin-top: 40px;
+            border-color: #040D12;
+            border-width: 10px;
+            border-radius: 5px;
+            padding: 10px;
         }
         .auto-style2 {
             margin-left: 45px;
         }
         </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
+
 <body>
+
     <form id="form1" runat="server">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/expense_tracker_logo.png" width="30px" height="30px" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+         
+        <div class="collapse navbar-collapse" id="navbarNav">
+           <ul class="navbar-nav">
+             
+               <li class="nav-item">
+                <a class="nav-link" href="Welcome.aspx">Home</a>
+               </li>
+
+               <li class="nav-item">
+                <asp:LinkButton ID="LinkButton2" runat="server" class="nav-link" OnClick="Addbtn_Click" >Add Expense</asp:LinkButton>
+               </li>
+
+               <li class="nav-item">
+                <asp:LinkButton ID="LinkButton3" runat="server" class="nav-link" OnClick="Viewbtn_Click" >View History</asp:LinkButton>
+               </li>
+
+               <li class="nav-item">
+                <asp:LinkButton ID="LinkButton4" runat="server" class="nav-link" OnClick="Dailytot_Click" >Daily Expense</asp:LinkButton>
+               </li>
+
+               <li class="nav-item">
+                <asp:LinkButton ID="LinkButton5" runat="server" class="nav-link" OnClick="Reportsbtn_Click" >Reports</asp:LinkButton>
+               </li>
+
+               <li>
+                <asp:Button ID="Button1" runat="server" class="nav-link" OnClick="Logoutbtn_Click" Text="Logout"/>
+               </li>
+
+           </ul>
+        </div>
+
+    </nav>
+
         <div>
-            <asp:Panel ID="Panel1" runat="server" BackColor="#CC0066" BorderColor="#660033" CssClass="auto-style1" Font-Bold="True" Font-Size="Large" ForeColor="White" Height="70px" Width="203px">
-                &nbsp;&nbsp;
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; History </asp:Panel>
+
+            <center><asp:Panel ID="Panel1" runat="server" BackColor="#CC0066" CssClass="auto-style1" Font-Bold="True" Font-Size="Large" ForeColor="White" style="width: 200px;">
+                History
+            </asp:Panel></center>
+            
+            <hr class="mx-5" /> 
+
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:ImageButton ID="ImageButton1" runat="server" Height="47px" ImageUrl="~/back_home.jpg" OnClick="ImageButton1_Click" Width="55px" />
-            <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <center>
             <asp:GridView ID="GridView1" runat="server" CellPadding="4" CssClass="auto-style2" ForeColor="#333333" GridLines="None" Width="262px">
                 <AlternatingRowStyle BackColor="White" />
                 <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
@@ -40,18 +89,23 @@
                 <SortedDescendingCellStyle BackColor="#FCF6C0" />
                 <SortedDescendingHeaderStyle BackColor="#820000" />
             </asp:GridView>
+            </center>
+
             <br />
-            <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <center>
             <asp:Button ID="Showbtn" runat="server" BackColor="#CC0066" ForeColor="White" Height="39px" OnClick="Showbtn_Click" Text="Show" Width="88px" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </center>
+
+            <br />
+
+            <center>
             <asp:Button ID="Totalbtn" runat="server" BackColor="#CC0066" ForeColor="White" Height="39px" OnClick="Totalbtn_Click" Text="Total Expense" />
-&nbsp;
+
             <asp:TextBox ID="Total" runat="server" ForeColor="#CC0066" Height="31px" TextMode="Number"></asp:TextBox>
-            <br />
-            <br />
-            <br />
+            </center>
         </div>
     </form>
+
 </body>
 </html>
