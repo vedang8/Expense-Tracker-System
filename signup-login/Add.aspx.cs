@@ -23,6 +23,12 @@ namespace signup_login
 
         protected void Addbtn_Click(object sender, EventArgs e)
         {
+            TextBox1.Text = "";
+            TextBox2.Text = "";
+            TextBox3.Text = "";
+            TextBox4.Text = "";
+            DropDownList1.SelectedItem.Text = "";
+
             string n1 = Session["username"].ToString();
             string p1 = Session["password"].ToString();
             if(string.IsNullOrEmpty(n1) || string.IsNullOrEmpty(p1))
@@ -90,9 +96,27 @@ namespace signup_login
             
         }
 
-        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        protected void Viewbtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Welcome.aspx");
+            Response.Redirect("~/View.aspx");
         }
+
+        protected void Dailytot_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Daily_Total.aspx");
+        }
+
+        protected void Logoutbtn_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("~/Login.aspx");
+        }
+
+        protected void Reportsbtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Reports.aspx");
+        }
+
     }
 }

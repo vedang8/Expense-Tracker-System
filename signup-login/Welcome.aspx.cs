@@ -13,6 +13,7 @@ namespace signup_login
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Panel1.Visible = false;
             string nam1 = Session["username"].ToString();
             string p1 = Session["password"].ToString();
             if (nam1 == null)
@@ -43,8 +44,28 @@ namespace signup_login
                     // con.Open();
                     cmd1.Parameters.Add("@TargetMonth", System.Data.SqlDbType.Int).Value = targetMonth;
                     cmd1.Parameters.AddWithValue("@UId", id);
-                    decimal amt = Convert.ToDecimal(cmd1.ExecuteScalar());
-                    TextBox1.Text = amt.ToString();
+                    //decimal amt = Convert.ToDecimal(cmd1.ExecuteScalar());
+                    //TextBox1.Text = amt.ToString();
+                    object result = cmd1.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        decimal amt = Convert.ToDecimal(result);
+                        if (amt != 0)
+                        {
+                            TextBox1.Text = amt.ToString();
+                        }
+                        else
+                        {
+                            Console.WriteLine("There is no data for your category");
+                            Panel1.Visible = true;
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        Panel1.Visible = true;
+                    }
+
                     con.Close();
                 }
             }

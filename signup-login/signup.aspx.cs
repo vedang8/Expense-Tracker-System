@@ -13,12 +13,12 @@ namespace signup_login
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
 
         protected void btnreg_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\VEDANGJOSHI\\source\\repos\\signup-login\\signup-login\\App_Data\\Database1.mdf;Integrated Security=True";
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\pranjal\\OneDrive\\Desktop\\collage studies\\SEMESTER-5\\WDDN\\signup-login\\signup-login\\signup-login\\App_Data\\Database1.mdf\";Integrated Security=True";
             SqlConnection connection = new SqlConnection(connectionString); 
             connection.Open();
 

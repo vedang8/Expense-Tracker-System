@@ -83,6 +83,33 @@ namespace signup_login
             }
         }
 
+        protected void Addbtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Add.aspx");
+        }
+
+        protected void Viewbtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View.aspx");
+        }
+
+        protected void Dailytot_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Daily_Total.aspx");
+        }
+
+        protected void Reportsbtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Reports.aspx");
+        }
+
+        protected void Logoutbtn_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("~/Login.aspx");
+        }
+
         protected void ImageButton1_Click(object sender, System.Web.UI.ImageClickEventArgs e)
         {
             Response.Redirect("~/Welcome.aspx");
